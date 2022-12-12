@@ -1,5 +1,38 @@
 export const GOVDAODAO_ABI = [
 	{
+		"inputs": [],
+		"name": "createProposal",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "proposalIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "executeProposal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -30,37 +63,21 @@ export const GOVDAODAO_ABI = [
 		"type": "event"
 	},
 	{
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "content",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
 				"internalType": "address",
-				"name": "target",
+				"name": "newOwner",
 				"type": "address"
 			}
 		],
-		"name": "createProposal",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"name": "transferOwnership",
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "fallback"
 	},
 	{
 		"inputs": [
@@ -68,12 +85,28 @@ export const GOVDAODAO_ABI = [
 				"internalType": "uint256",
 				"name": "proposalIndex",
 				"type": "uint256"
+			},
+			{
+				"internalType": "enum GovDAO.Vote",
+				"name": "vote",
+				"type": "uint8"
 			}
 		],
-		"name": "executeProposal",
+		"name": "voteOnProposal",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdrawEther",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	},
 	{
 		"inputs": [],
@@ -127,21 +160,6 @@ export const GOVDAODAO_ABI = [
 				"type": "uint256"
 			},
 			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "content",
-				"type": "string"
-			},
-			{
-				"internalType": "address payable",
-				"name": "target",
-				"type": "address"
-			},
-			{
 				"internalType": "bool",
 				"name": "executed",
 				"type": "bool"
@@ -149,55 +167,6 @@ export const GOVDAODAO_ABI = [
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "proposalIndex",
-				"type": "uint256"
-			},
-			{
-				"internalType": "enum GovDAO.Vote",
-				"name": "vote",
-				"type": "uint8"
-			}
-		],
-		"name": "voteOnProposal",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdrawEther",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "receive"
 	}
 ];
 export const GOVDAODAO_CONTRACT_ADDRESS = "0xea6896ed778a0BCD342ACB1758A6Bf7F2271c80f";
