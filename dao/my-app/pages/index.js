@@ -2,7 +2,7 @@ import Head from "next/head";
 import HeaderComponent from "./header";
 import Web3Modal from "web3modal";
 import { Contract, providers } from "ethers";
-import { formatEther } from "ethers/lib/utils";
+import { formatEther, parseEther } from "ethers/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import {
   GOVDAODAO_ABI,
@@ -298,7 +298,7 @@ export default function Home() {
           <input
             placeholder="0.1"
             type="number"
-            onChange={(e) => setAmount(e.target.value * 10e17)}
+            onChange={(e) => setAmount(parseEther(e.target.value))}
           /><br />
 
           <button className={styles.button2} onClick={createProposal}>
