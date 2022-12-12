@@ -294,7 +294,7 @@ export default function Home() {
           />
           <br />
           <br />
-          <label className={styles.lab}> How much:</label>
+          <label className={styles.lab}> How much Gweis:</label>
           <input
             placeholder="0.1"
             type="number"
