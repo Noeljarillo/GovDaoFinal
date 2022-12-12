@@ -193,7 +193,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Whitelist Dapp</title>
+        <title>GOV:DAO Whitelist</title>
         <meta name="description" content="Whitelist Gov.dao" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

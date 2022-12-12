@@ -328,7 +328,7 @@ export default function Home() {
             Presale has started!!! If your address is whitelisted, Mint a GaleryKey 🥳
           </div>
           <button className={styles.button} onClick={presaleMint}>
-            Presale Mint .5eth 🚀
+            Presale Mint 0.5eth 🚀
           </button>
         </div>
       );
@@ -338,7 +338,7 @@ export default function Home() {
     if (presaleStarted && presaleEnded) {
       return (
         <button className={styles.button} onClick={publicMint}>
-          Public Mint .5eth 🚀
+          Public Mint 0.5eth 🚀
         </button>
       );
     }
