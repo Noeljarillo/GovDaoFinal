@@ -328,8 +328,8 @@ export default function Home() {
         <div>
           {proposals.map((p, index) => (
             <div key={index} className={styles.proposalCard}>
-              <p>Proposal ID: {p.proposalId}</p>
-              <p className={styles.proposalContent}><h2>Content: </h2>{p.content}</p>
+              <p>ID: {p.proposalId}</p>
+              <p className={styles.proposalContent}><h2>Proposal: </h2></p>
               <p>Deadline: {p.deadline.toLocaleString()}</p>
               <p>Yes Votes: {p.yesVotes} &nbsp; No Votes: {p.noVotes}</p>
               <p>Executed?: {p.executed.toString()}</p>
