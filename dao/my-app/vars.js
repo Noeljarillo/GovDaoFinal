@@ -200,7 +200,7 @@ export const GOVDAODAO_ABI = [
 		"type": "receive"
 	}
 ];
-export const GOVDAODAO_CONTRACT_ADDRESS = "0x7772f224c0066331F87c24A72c7F72A317337455";
+export const GOVDAODAO_CONTRACT_ADDRESS = "0x3855aC7f15aE94B6940fB10cDf31a9233f29a7a4";
 export const GALERYKEYS_ABI = [
 	{
 		"inputs": [
