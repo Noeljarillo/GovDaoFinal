@@ -254,7 +254,7 @@ export default function Home() {
   function renderCreateProposalTab() {
     
     const towei  = 1000000000000000000;
-     
+    const toeth = 1000000000000000000;
     if (loading) {
       return (
         <div className={styles.description}>
@@ -298,7 +298,7 @@ export default function Home() {
           <input
             placeholder="0.1"
             type="number"
-            onChange={(e) => setAmount(e.target.value * 10)}
+            onChange={(e) => setAmount(e.target.value * toeth)}
           /><br />
 
           <button className={styles.button2} onClick={createProposal}>
