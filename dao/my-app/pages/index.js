@@ -298,7 +298,7 @@ export default function Home() {
           <input
             placeholder="0.1"
             type="number"
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value * 10)}
           /><br />
 
           <button className={styles.button2} onClick={createProposal}>
@@ -329,7 +329,7 @@ export default function Home() {
           {proposals.map((p, index) => (
             <div key={index} className={styles.proposalCard}>
               <p>ID: {p.proposalId}</p>
-              <p className={styles.proposalContent}><h2>Content: </h2> {p.content}</p>
+              <p className={styles.proposalContent}><h2>Proposal: </h2> {p.content}</p>
               <p>Deadline: {p.deadline.toLocaleString()}</p>
               <p>Yes Votes: {p.yesVotes} &nbsp; No Votes: {p.noVotes}</p>
               <p>Executed?: {p.executed.toString()}</p>
